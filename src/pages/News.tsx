@@ -9,6 +9,15 @@ import studentStoryImage from '@assets/sjy-student-story.jpg';
 const articles = [
   {
     img: campusLifeImage,
+    cat: 'Graduation',
+    catCls: 'bg-yellow-50 text-yellow-800 border-yellow-300',
+    date: 'August 2026',
+    title: '2026 Thanksgiving & Graduation Ceremony — 21–22 August',
+    excerpt: 'The Catholic University of South Sudan, St. John's Yambio Campus, proudly hosts its 2026 Thanksgiving and Graduation Ceremony on 21–22 August 2026. Day 1 features a Thanksgiving Mass at St. Mary Mother of God Catholic Parish, Yambio at 4:00 pm. Day 2 begins with a Graduation Parade at Freedom Square (9:00 am), followed by the Grand Finale at St. Mary\'s Parish at 11:00 am.',
+    note: null,
+  },
+  {
+    img: campusLifeImage,
     cat: 'Announcement',
     catCls: 'bg-blue-50 text-blue-700 border-blue-200',
     date: 'July 2026',
@@ -102,9 +111,35 @@ export default function News() {
           <ScrollReveal className="mb-8">
             <h2 className="font-serif text-2xl font-semibold text-foreground">Announcements</h2>
           </ScrollReveal>
+
+          {/* Graduation Ceremony – Featured */}
+          <ScrollReveal className="mb-6">
+            <div className="border border-yellow-300 bg-yellow-50/60 rounded-lg p-6 flex flex-col sm:flex-row gap-5 items-start hover:shadow-md transition-shadow">
+              <div className="shrink-0 w-16 h-16 rounded-lg bg-primary flex flex-col items-center justify-center text-white select-none shadow">
+                <span className="text-[9px] font-bold tracking-widest uppercase">Aug</span>
+                <span className="text-2xl font-bold font-serif leading-none">21</span>
+                <span className="text-[9px] tracking-wide">– 22</span>
+              </div>
+              <div className="flex-1">
+                <div className="flex flex-wrap gap-2 items-center mb-2">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-yellow-100 text-yellow-800 border border-yellow-300">
+                    🎓 Graduation
+                  </span>
+                  <span className="text-xs text-muted-foreground font-medium">21–22 August 2026</span>
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-1">
+                  2026 Thanksgiving &amp; Graduation Ceremony
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Catholic University of South Sudan, St. John's Yambio Campus cordially announces its <strong>2026 Thanksgiving and Graduation Ceremony</strong> — a two-day celebration of academic achievement. Hosted by <em>Most Rev. Barani Eduardo Hiiboro Kussala</em>.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* Campus Reopening */}
           <ScrollReveal>
             <div className="border border-primary/20 bg-primary/3 rounded p-6 flex flex-col sm:flex-row gap-5 items-start hover:shadow-sm transition-shadow">
-              {/* Date block */}
               <div className="shrink-0 w-14 h-14 rounded bg-primary flex flex-col items-center justify-center text-white select-none">
                 <span className="text-[10px] font-semibold tracking-wide uppercase">Jul</span>
                 <span className="text-xl font-bold font-serif leading-none">20</span>
@@ -171,10 +206,76 @@ export default function News() {
           <ScrollReveal className="mb-8">
             <h2 className="font-serif text-2xl font-semibold text-foreground">Upcoming Events</h2>
           </ScrollReveal>
+
+          {/* 2026 Graduation — Two-Day Schedule */}
           <ScrollReveal>
-            <div className="border border-dashed border-border rounded p-10 text-center">
-              <p className="text-muted-foreground text-sm mb-1">Check back for upcoming campus events.</p>
-              <p className="text-xs text-muted-foreground italic">Events will be published here as information is confirmed with the institution.</p>
+            <div className="rounded-xl border border-yellow-200 bg-gradient-to-br from-yellow-50 via-white to-blue-50 overflow-hidden shadow-sm">
+              {/* Header */}
+              <div className="bg-primary px-6 py-5 text-white">
+                <p className="text-xs font-semibold tracking-widest uppercase opacity-80 mb-1">Catholic University of South Sudan · St. John's Yambio Campus</p>
+                <h3 className="font-serif text-xl font-bold">2026 Thanksgiving &amp; Graduation Ceremony</h3>
+                <p className="text-sm opacity-80 mt-1">Hosted by Most Rev. Barani Eduardo Hiiboro Kussala</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-yellow-200">
+
+                {/* Day 1 */}
+                <div className="p-6">
+                  <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-yellow-300">
+                    <span>FIRST DAY</span>
+                  </div>
+                  <h4 className="font-serif text-base font-semibold text-foreground mb-4">🙏 Thanksgiving Mass</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">📅</span>
+                      <span><strong className="text-foreground">Date:</strong> Friday, 21st August, 2026</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">📍</span>
+                      <span><strong className="text-foreground">Venue:</strong> St. Mary Mother of God Catholic Parish, Yambio</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">🕓</span>
+                      <span><strong className="text-foreground">Time:</strong> 4:00 pm</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Day 2 */}
+                <div className="p-6">
+                  <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-blue-200">
+                    <span>SECOND DAY</span>
+                  </div>
+                  <h4 className="font-serif text-base font-semibold text-foreground mb-4">🎓 Grand Finale of the Graduation Ceremony</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">🚶</span>
+                      <span><strong className="text-foreground">Parade:</strong> Freedom Square · 9:00 am</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">📅</span>
+                      <span><strong className="text-foreground">Date:</strong> Saturday, 22nd August, 2026</span>
+                    </li>
+                  </ul>
+                  <p className="text-xs font-semibold text-foreground mt-4 mb-2 uppercase tracking-wide">Part II</p>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">📍</span>
+                      <span><strong className="text-foreground">Venue:</strong> St. Mary Mother of God Catholic Parish, Yambio</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-0.5 text-primary">🕙</span>
+                      <span><strong className="text-foreground">Time:</strong> 11:00 am</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="bg-primary/5 border-t border-yellow-200 px-6 py-4 text-center">
+                <p className="font-serif italic text-primary text-sm font-medium">✦ Congratulations Graduates ✦</p>
+                <p className="text-xs text-muted-foreground mt-1">We are proud of you today, tomorrow and always.</p>
+              </div>
             </div>
           </ScrollReveal>
         </div>
