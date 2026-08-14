@@ -162,36 +162,39 @@ export default function News() {
       </section>
 
       {/* News Grid */}
-      <section className="py-16 bg-muted/40 border-t border-border">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal className="mb-8">
-            <h2 className="font-serif text-2xl font-semibold text-foreground">News & Stories</h2>
+          <ScrollReveal className="mb-12">
+            <h2 className="font-serif text-3xl font-bold text-gray-900">Latest Insights</h2>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {articles.map((article, i) => (
-              <ScrollReveal key={article.title} delay={i * 0.08}>
-                <article className="bg-card border border-border rounded overflow-hidden h-full flex flex-col group hover:shadow-md transition-shadow duration-300">
-                  <div className="relative h-44 overflow-hidden img-zoom-wrap">
+              <ScrollReveal key={article.title} delay={i * 0.1}>
+                <article className="group relative h-full flex flex-col bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-2">
+                  <div className="relative h-64 overflow-hidden">
                     <img
                       src={article.img}
                       alt={article.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover img-zoom"
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors duration-300" />
-                  </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold border ${article.catCls}`}>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute top-4 left-4 flex gap-2">
+                      <span className={`px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full backdrop-blur-md bg-white/20 text-white border border-white/30`}>
                         {article.cat}
                       </span>
-                      <span className="text-xs text-muted-foreground">{article.date}</span>
                     </div>
-                    <h3 className="font-serif text-base font-semibold text-foreground mb-2 leading-snug">{article.title}</h3>
-                    <p className="text-xs text-muted-foreground leading-relaxed flex-1">{article.excerpt}</p>
-                    {article.note && (
-                      <p className="text-xs text-amber-700 italic mt-3">{article.note}</p>
-                    )}
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-indigo-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  <div className="p-6 flex flex-col flex-grow">
+                    <p className="text-xs font-medium text-blue-600 mb-2">{article.date}</p>
+                    <h3 className="font-serif text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-blue-700 transition-colors">
+                      {article.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-6 line-clamp-3 flex-grow">{article.excerpt}</p>
+                    <div className="flex items-center gap-1 text-primary font-semibold text-sm mt-auto pt-4 border-t border-gray-100 group-hover:gap-3 transition-all duration-300 cursor-pointer">
+                      <span className="group-hover:underline underline-offset-2">Read story</span>
+                      <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">→</span>
+                    </div>
                   </div>
                 </article>
               </ScrollReveal>
