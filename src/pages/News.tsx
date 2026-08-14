@@ -13,7 +13,7 @@ const articles = [
     catCls: 'bg-yellow-50 text-yellow-800 border-yellow-300',
     date: 'August 2026',
     title: '2026 Thanksgiving & Graduation Ceremony — 21–22 August',
-    excerpt: 'The Catholic University of South Sudan, St. John's Yambio Campus, proudly hosts its 2026 Thanksgiving and Graduation Ceremony on 21–22 August 2026. Day 1 features a Thanksgiving Mass at St. Mary Mother of God Catholic Parish, Yambio at 4:00 pm. Day 2 begins with a Graduation Parade at Freedom Square (9:00 am), followed by the Grand Finale at St. Mary\'s Parish at 11:00 am.',
+    excerpt: 'The Catholic University of South Sudan, St. John\'s Yambio Campus, proudly hosts its 2026 Thanksgiving and Graduation Ceremony on 21\u201322 August 2026. Day 1 features a Thanksgiving Mass at St. Mary Mother of God Catholic Parish, Yambio at 4:00 pm. Day 2 begins with a Graduation Parade at Freedom Square (9:00 am), followed by the Grand Finale at St. Mary\'s Parish at 11:00 am.',
     note: null,
   },
   {
